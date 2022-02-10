@@ -30,7 +30,7 @@ function App() {
 			<Quote quote={quote} />
 
 			<div className='buttons'>
-				<TwitterShareButton url={quote.quote} hashtags={[quote.character]}>
+				<TwitterShareButton url={quote.quote} hashtags={[quote.character, "Anime"]}>
 					<TwitterIcon size={32} round />
 				</TwitterShareButton>
 				<button onClick={generate}>Generate new quote</button>
