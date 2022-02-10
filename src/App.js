@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 // Components
 import Quote from "./components/Quote";
+// React Share
+import { TwitterIcon, TwitterShareButton } from "react-share";
 
 function App() {
 	const [quote, setQuote] = useState({
@@ -27,7 +29,12 @@ function App() {
 		<div className='App'>
 			<Quote quote={quote} />
 
-			<button onClick={generate}>Generate new quote</button>
+			<div className='buttons'>
+				<TwitterShareButton url={quote.quote} hashtags={[quote.character]}>
+					<TwitterIcon size={32} round />
+				</TwitterShareButton>
+				<button onClick={generate}>Generate new quote</button>
+			</div>
 		</div>
 	);
 }

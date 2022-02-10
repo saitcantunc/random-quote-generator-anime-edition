@@ -83,6 +83,13 @@ blockquote {
 	transform: translate(25%, 50%);
 }
 
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 500px;
+}
+
 button {
 	appearance: none;
 	border: none;
